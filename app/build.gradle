@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.davidpedroza.nanodegree.sunshine"
-        minSdkVersion 11
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -19,7 +19,7 @@ android {
 
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', YOUR_API_KEY
+        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', "\"270fbd943928c98a4902d5038791b6dd\""
     }
 
 }

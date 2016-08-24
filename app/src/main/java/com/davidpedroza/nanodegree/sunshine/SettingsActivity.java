@@ -1,7 +1,6 @@
 package com.davidpedroza.nanodegree.sunshine;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -14,13 +13,13 @@ public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.prefs_general);
 
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)));
-
+        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_metric_key)));
     }
 
     /**
