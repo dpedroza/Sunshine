@@ -1,4 +1,4 @@
-package com.davidpedroza.nanodegree.sunshine;
+package com.davidpedroza.nanodegree.sunshine.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.davidpedroza.nanodegree.sunshine.R;
 
 public class DetailActivity extends AppCompatActivity {
 

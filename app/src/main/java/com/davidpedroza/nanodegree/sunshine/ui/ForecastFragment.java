@@ -1,4 +1,4 @@
-package com.davidpedroza.nanodegree.sunshine;
+package com.davidpedroza.nanodegree.sunshine.ui;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -20,6 +20,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.davidpedroza.nanodegree.sunshine.BuildConfig;
+import com.davidpedroza.nanodegree.sunshine.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

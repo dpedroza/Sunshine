@@ -1,4 +1,4 @@
-package com.davidpedroza.nanodegree.sunshine;
+package com.davidpedroza.nanodegree.sunshine.ui;
 
 import android.os.Bundle;
 import android.preference.ListPreference;
@@ -6,8 +6,10 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
+import com.davidpedroza.nanodegree.sunshine.R;
+
 /**
- * Created by David on 22/08/2016.
+ * Created by David
  */
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {

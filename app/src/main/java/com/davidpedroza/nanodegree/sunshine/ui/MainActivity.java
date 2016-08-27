@@ -1,11 +1,12 @@
-package com.davidpedroza.nanodegree.sunshine;
+package com.davidpedroza.nanodegree.sunshine.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.davidpedroza.nanodegree.sunshine.R;
 
 public class MainActivity extends AppCompatActivity {
 
