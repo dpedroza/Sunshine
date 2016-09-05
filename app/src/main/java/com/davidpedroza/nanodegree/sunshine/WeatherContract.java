@@ -1,5 +1,6 @@
 package com.davidpedroza.nanodegree.sunshine;
 
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
@@ -12,6 +13,9 @@ public class WeatherContract {
 
         public static final String TABLE_NAME = "location";
 
+        public static final String CONTENT_AUTHORITY = "com.davidpedroza.nanodegree.sunshine";
+        public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+
         public static final String COLUMN_LOCATION_SETTING = "location_setting";
 
         public static final String COLUMN_CITY_NAME = "city_name";
@@ -23,6 +27,9 @@ public class WeatherContract {
     public static final class WeatherEntry implements BaseColumns {
 
         public static final String TABLE_NAME = "weather";
+
+        public static final String CONTENT_AUTHORITY = "com.davidpedroza.nanodegree.sunshine";
+        public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
         // Column with the foreign key into the location table.
         public static final String COLUMN_LOC_KEY = "location_id";

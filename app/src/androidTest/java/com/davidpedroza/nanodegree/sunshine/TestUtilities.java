@@ -14,8 +14,8 @@ import java.util.Set;
  */
 public class TestUtilities extends AndroidTestCase {
 
-    static final String TEST_LOCATION = "99705";
-    static final long TEST_DATE = 1419033600L;
+    public static final String TEST_LOCATION = "99705";
+    public static final long TEST_DATE = 1419033600L;
 
     /*
     Students: You can uncomment this helper function once you have finished creating the
