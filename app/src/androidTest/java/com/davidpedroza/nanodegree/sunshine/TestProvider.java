@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.davidpedroza.nanodegree.sunshine;
 
 import android.content.ContentValues;
@@ -5,8 +20,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 
-/**
- * Created by David on 03/09/2016.
+/*
+    Note: This is not a complete set of tests of the Sunshine ContentProvider, but it does test
+    that at least the basic functionality has been implemented correctly.
+
+    Students: Uncomment the tests in this class as you implement the functionality in your
+    ContentProvider to make sure that you've implemented things reasonably correctly.
  */
 public class TestProvider extends AndroidTestCase {
 
@@ -17,23 +36,24 @@ public class TestProvider extends AndroidTestCase {
        It also queries the ContentProvider to make sure that the database has been successfully
        deleted, so it cannot be used until the Query and Delete functions have been written
        in the ContentProvider.
+
        Students: Replace the calls to deleteAllRecordsFromDB with this one after you have written
        the delete functionality in the ContentProvider.
      */
     public void deleteAllRecordsFromProvider() {
         mContext.getContentResolver().delete(
-                WeatherContract.WeatherEntry.BASE_CONTENT_URI,
+                WeatherContract.WeatherEntry.CONTENT_URI,
                 null,
                 null
         );
         mContext.getContentResolver().delete(
-                WeatherContract.LocationEntry.BASE_CONTENT_URI,
+                WeatherContract.LocationEntry.CONTENT_URI,
                 null,
                 null
         );
 
         Cursor cursor = mContext.getContentResolver().query(
-                WeatherContract.WeatherEntry.BASE_CONTENT_URI,
+                WeatherContract.WeatherEntry.CONTENT_URI,
                 null,
                 null,
                 null,
@@ -43,7 +63,7 @@ public class TestProvider extends AndroidTestCase {
         cursor.close();
 
         cursor = mContext.getContentResolver().query(
-                WeatherContract.LocationEntry.BASE_CONTENT_URI,
+                WeatherContract.LocationEntry.CONTENT_URI,
                 null,
                 null,
                 null,
@@ -52,7 +72,12 @@ public class TestProvider extends AndroidTestCase {
         assertEquals("Error: Records not deleted from Location table during delete", 0, cursor.getCount());
         cursor.close();
     }
-    
+
+    /*
+       This helper function deletes all records from both database tables using the database
+       functions only.  This is designed to be used to reset the state of the database until the
+       delete functionality is available in the ContentProvider.
+     */
     public void deleteAllRecordsFromDB() {
         WeatherDbHelper dbHelper = new WeatherDbHelper(mContext);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
