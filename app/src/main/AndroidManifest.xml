@@ -30,6 +30,9 @@
         <activity
             android:name=".ui.SettingsActivity"
             android:theme="@style/AppTheme" />
+        <provider
+            android:authorities="com.davidpedroza.nanodegree.sunshine"
+            android:name=".data.WeatherProvider"/>
     </application>
 
 </manifest>
