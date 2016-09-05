@@ -79,4 +79,7 @@ public class TestUtilities extends AndroidTestCase {
     }
 
 
+    public static void validateCursor(String testBasicWeatherQuery, Cursor weatherCursor, ContentValues weatherValues) {
+
+    }
 }
