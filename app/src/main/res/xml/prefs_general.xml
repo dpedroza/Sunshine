@@ -12,8 +12,8 @@
 
     <ListPreference
         android:title="Sistema Métrico"
-        android:key="@string/pref_metric_key"
-        android:defaultValue="@string/pref_metric_celsius"
+        android:key="@string/pref_units_key"
+        android:defaultValue="@string/pref_units_imperial"
         android:entries="@array/pref_unit_options"
         android:entryValues="@array/pref_unit_values"/>
 
