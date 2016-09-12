@@ -204,6 +204,8 @@ public class TestDb extends AndroidTestCase {
         // query if you like)
 
         // Finally, close the cursor and database
+        cursor.close();
+        db.close();
     }
 
 
